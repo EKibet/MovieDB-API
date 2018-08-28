@@ -13,9 +13,12 @@ def index():
     popular_movies = get_movies('popular')
     upcoming_movie = get_movies('upcoming')
     now_showing_movie = get_movies('now_playing')
+    top_rated_movies = get_movies('top_rated')
     title = 'Home - Welcome to The best Movie Review Website Online'
-    return render_template('index.html', title = title, popular = popular_movies, upcoming = upcoming_movie, now_showing = now_showing_movie )
-
+    return render_template('index.html', title = title, popular = popular_movies, upcoming = upcoming_movie, now_showing = now_showing_movie, top_rated_movies =top_rated_movies )
+# @app.route():
+# def top_rated():
+#     top_rated_movies = get_movies('')
 
 
 @app.route('/movie/<int:id>')
